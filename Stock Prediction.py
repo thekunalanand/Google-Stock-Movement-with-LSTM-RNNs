@@ -18,7 +18,7 @@ regressor.add(LSTM(units = 4, activation = 'sigmoid', input_shape = (None, 1)))
 regressor.add(Dense(units = 1))
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 regressor.fit(X_train, y_train, batch_size = 32, epochs = 200)
-test_set = pd.read_csv('Google_Stock_Price_Test.csv')
+test_set = pd.read_csv('Google_Stock_Price_Testt.csv')
 real_stock_price = test_set.iloc[:,1:2].values
 inputs = real_stock_price
 inputs = sc.transform(inputs)
